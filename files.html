@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="../index" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SENTIMIENTO</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SENTIMIENTO MASIVO</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="../index" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SENTIMIENTO</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SENTIMIENTO MASIVO</a>
+</div>
+  
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- The Tour Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px"  id="tour">
+    <h2 class="w3-wide">NLP</h2>
+    <p class="w3-opacity"><i>Natural Language Processing</i></p>
+    <p class="w3-justify">El Procesamiento del Lenguaje Natural (PLN)—o NLP por su nombre en inglés, Natural Language Processing—es el área de estudio centrada en cómo los ordenadores entienden el lenguaje humano, lo interpretan y procesan.</p>
+      
+    <p class="w3-justify">Instrucciones: Cargue un archivo tipo csv. que contenga una columna con encabezado y las oraciones a las que le desea aplicar el análisis de sentimiento.
+     Una vez realizado el análisis se le descargará automáticamente un archivo tipo csv. con las oraciones y el tipo de sentimiento obtenido y la probabilidad de ser Positivo, Negativo o Neutro.</p>
+      
+      <div class="w3-container w3-gray w3-section">
+        <h2>Análisis de Sentimiento Masivo</h2>
+      </div>
+      <form class="w3-container" method="post" enctype="multipart/form-data">
+      
+       <label>Cargue el archivo</label>
+       <input type="file" class = "w3-section" name="fileup" value="Escoja el archivo">
+      
+  
+       <input class = "w3-section"  type="submit" name="Analiza_resumen", value="Analizar">
+      
+      </form>
+  </div>
+      
+
+      
+      
+    
+   
+</div>
+
+ 
+
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/alonsofernandezgonzalezcr/"></a> 
+<p class="w3-medium">Powered by <a href="https://github.com/pysentimiento/pysentimiento" target="_blank">pysentimiento</a></p>
+</footer>
+
+
+
+</body>
+</html>
