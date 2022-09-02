@@ -74,4 +74,4 @@ document.getElementById("resultado").innerHTML = JSON.stringify(resultado, null,
 
 
 
-botonRegistrar.addEventListener('click',obtenerDatos);
+botonAnalizar.addEventListener('click',obtenerDatos);
