@@ -73,7 +73,7 @@ function obtenerDatos(){
 
 let resultados = [];
 let resultados_datos = async () => {
-    let resultados = await listar_categoria_victima();
+    let resultados = await analizar_texto();
     document.getElementById("resultado").innerHTML = JSON.stringify(resultados, null, 4);
 
 };
