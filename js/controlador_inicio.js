@@ -68,7 +68,7 @@ function obtenerDatos(){
 };
 
 /*carga respuesta*/
-const tbody = document.querySelector('#tbl-resultado tbody');
+const tbody = document.getElementById('#tbl-resultado tbody');
 let lista_resultados = [];
 let mostrar_resultados = async() => {
     let lista_resultados = await analizar_texto();
