@@ -13,7 +13,7 @@ let analizar_texto = async(pdescripcion) => {
             'texto': pdescripcion,
         }
     }).then((res) => {
-        resultado = res.data.resultado
+        resultado = res.data
     }).catch((err) => {
         console.log('No se pudo establecer la comunicación con el servidor, ocurrió el siguiente error: ', err)
     });
