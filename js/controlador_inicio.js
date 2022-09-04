@@ -69,12 +69,12 @@ function obtenerDatos(){
 
 /*carga respuesta*/
 
-
-
 let resultados = [];
 let resultados_datos = async () => {
     let resultados = await analizar_texto();
-    document.getElementById("resultado").innerHTML = JSON.stringify(resultados, null, 4);
+    let datos = document.getElementById("resultado").innerHTML 
+    datos = JSON.stringify(resultados);
+    
 
 };
 
