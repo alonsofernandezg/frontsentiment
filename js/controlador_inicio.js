@@ -68,15 +68,27 @@ function obtenerDatos(){
 };
 
 /*carga respuesta*/
+const tbody = document.querySelector('#tbl-resultado tbody');
+let lista_resultados = [];
+let mostrar_resultados = async() => {
+    let lista_resultados = await analizar_texto();
+    tbody.innerHTML = '';
+  
+    for (let i = 0; i < lista_resultados.length; i++) {
+        let fila = tbody.insertRow();
+      
+       let celda_oracion = fila.insertCell().innerHTML = lista_resultados[i]['sentence'];
+       let celda_tipo_incidente = fila.insertCell().innerHTML = lista_incidente[i]['probas'];
+       let celda_ruta = fila.insertCell().innerHTML = lista_incidente[i]['is_multilabel'];
+       let celda_ubicacion_incidente =  fila.insertCell().innerHTML = lista_incidente[i]['output'];
+   
+      
+    }
 
-let resultados = [];
-let resultados_datos = async () => {
-    let resultados = await analizar_texto();
-    let datos = document.getElementById("resultado").innerHTML 
-    datos = JSON.stringify(resultados);
-    
-
+   
 };
 
-resultados_datos()
+
+
+mostrar_resultados()
 botonAnalizar.addEventListener('click',obtenerDatos);
