@@ -69,9 +69,14 @@ function obtenerDatos(){
 
 /*carga respuesta*/
 
-let resultado = analizar_texto()
-document.getElementById("resultado").innerHTML = JSON.stringify(resultado, null, 4);
 
 
+let resultados = [];
+let resultados_datos = async () => {
+    let resultados = await listar_categoria_victima();
+    document.getElementById("resultado").innerHTML = JSON.stringify(resultados, null, 4);
 
+};
+
+resultados_datos()
 botonAnalizar.addEventListener('click',obtenerDatos);
