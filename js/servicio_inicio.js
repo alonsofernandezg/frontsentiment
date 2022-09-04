@@ -7,13 +7,9 @@ let analizar_texto = async(pdescripcion) => {
 
     await axios({
         method: 'get',
+        params: {comment: pdescripcion},
         url: 'https://sentimenttextapp.azurewebsites.net/index',
         responseType: 'json',
-        data: {
-            
-            'texto':pdescripcion,
-            
-        } 
     }).then((res) => {
         resultado = res.data
     }).catch((err) => {
