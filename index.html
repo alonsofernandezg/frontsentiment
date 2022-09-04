@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -63,8 +62,20 @@ body {font-family: "Lato", sans-serif}
       </form>
 
       <label>Resultado</label>
-      <p id="resultado" ></p>
-      
+      <!-- <p id="resultado" ></p> -->
+      <table id="tbl-resultado" >
+        
+        <thead>
+            <tr class="w3-black">
+                <th>Oracion</th>
+                <th>Probabilidad</th>
+                <th>Multilabel</th>
+                <th>Sentimiento</th>
+  
+            </tr>
+        </thead>
+        
+    </table>
 
   </div>
 
@@ -84,7 +95,8 @@ body {font-family: "Lato", sans-serif}
   <p class="w3-medium">Powered by <a href="https://github.com/pysentimiento/pysentimiento" target="_blank">pysentimiento</a></p>
 </footer>
 
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="js/servicio_inicio.js"></script>
 <script src="js/controlador_inicio.js"></script>
