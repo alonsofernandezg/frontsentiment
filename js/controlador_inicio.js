@@ -67,7 +67,7 @@ function obtenerDatos(){
   }
 };
 
-document.body.appendChild(script);
+
 /*carga respuesta*/
 const tbody = document.querySelector('#tbl-resultado tbody');
 let lista_resultados = [];
