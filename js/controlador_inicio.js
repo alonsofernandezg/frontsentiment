@@ -69,7 +69,7 @@ function obtenerDatos(){
 
 
 /*carga respuesta*/
-const tbody = document.querySelector('#tbl-resultado tbody');
+/* const tbody = document.querySelector('#tbl-resultado tbody');
 let lista_resultados = [];
 let mostrar_resultados = async() => {
     let lista_resultados = await analizar_texto();
@@ -89,8 +89,13 @@ let mostrar_resultados = async() => {
 
    
 };
+ */
+let mostrar_datos = async() => {
+    let lista_resultados = await analizar_texto();
+    
+document.querySelector('#resultado').value = lista_resultados[0]['output'];
 
+};
 
-
-mostrar_resultados()
+mostrar_datos()
 botonAnalizar.addEventListener('click',obtenerDatos);
