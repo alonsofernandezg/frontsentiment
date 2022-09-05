@@ -12,6 +12,7 @@ axios.post('upload_file', formData, {
 
 let  analizar_archivo = async(pfile)=> {
     
+
     if (pfile.files[0]) {
        var formData = new FormData();
        for (const file of pfile.files)
@@ -25,14 +26,14 @@ let  analizar_archivo = async(pfile)=> {
                 'Accept': 'application/json',
                 'Content-Type': 'multipart/form-data'
             }
-            })
-           .then(response => {
-               console.log(response);
-           })
-           .catch(error => {
-               co;nsole.error(error);
-           });
-    }
+            }).then((res) => {
+        resultadomasivo = res.data
+        }).catch((err) => {
+        console.log('No se pudo establecer la comunicación con el servidor, ocurrió el siguiente error: ', err)
+        });
+
+    return resultadomasivo;
+};
 };
 
 
