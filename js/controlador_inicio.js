@@ -67,14 +67,16 @@ function obtenerDatos(){
   }
 };
 
+document.body.appendChild(script);
 /*carga respuesta*/
-const tbody = document.getElementById('#tbl-resultado tbody');
+const tbody = document.querySelector('#tbl-resultado tbody');
 let lista_resultados = [];
 let mostrar_resultados = async() => {
     let lista_resultados = await analizar_texto();
     
   
     for (let i = 0; i < lista_resultados.length; i++) {
+        tbody.innerHTML = '';
         let fila = tbody.insertRow();
       
        let celda_oracion = fila.insertCell().innerHTML = lista_resultados[i]['sentence'];
