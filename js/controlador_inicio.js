@@ -97,5 +97,5 @@ document.querySelector('#resultado').value = lista_resultados;
 
 };
 
-mostrar_datos()
+mostrar_datos();
 botonAnalizar.addEventListener('click',obtenerDatos);
